@@ -192,9 +192,9 @@ else {
         // Vérification des champs de saisie du formulaire
         //====================================================
         // Déclaration de variable pour les regexs 
-        let matchFirstName = /^[a-zA-Zéèêîçôï]+(?:[\-][a-zA-Zéèêîçôï]+)*$/;
+        let matchFirstName = /^[a-zA-Zéèêîçôï]+(?:['\s\-a-zA-Zéèêîçôï]+)*$/;
         let matchLastName = /^[a-zA-Zéèêîçôï]+(?:['\s][a-zA-Zéèêîçôï]+)*$/;
-        let matchAddress = /^[a-zA-Zéèêîçôï0-9]+(?:['\-\s][a-zA-Zéèêîçôï0-9]+)*$/;
+        let matchAddress = /^[a-zA-Zéèêîçôï0-9]+(?:['\s\-\.a-zA-Zéèêîçôï0-9]+)*$/;
         let matchCity = /^[a-zA-Zéèêîçôï]+(?:['\-\s][a-zA-Zéèêîçôï]+)*$/;
         let matchEmail = /^\w+([\.-_]?\w+)*@\w+([\.-_]?\w+)*(\.\w{2,3})+$/;
 
