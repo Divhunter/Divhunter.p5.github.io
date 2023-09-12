@@ -1,7 +1,7 @@
 const http = require('http');
 const app = require('./app');
 
-const normalizePort = val => {
+/*const normalizePort = val => {
   const port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -45,4 +45,13 @@ const bind = typeof address === 'string' ? 'pipe ' + address : 'port ' + port;
 console.log('Listening on ' + bind);
 });
 
-app.listen(port, () => console.log('Le serveur à démarré au port ' + port));
+app.listen(port, () => console.log('Le serveur à démarré au port ' + port));*/
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {"Containt-type": "text/plain"});
+  res.end("hello world!")
+}) 
+
+const port = normalizePort(process.env.PORT || '3000');
+
+server.listen(port, () => console.log('Le serveur à démarré au port ' + port));
